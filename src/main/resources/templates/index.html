@@ -8,8 +8,9 @@
     <body>
         <div align="center">
             <p th:text="${session.mySessionAttribute}" th:unless="${session == null}">[...]</p>
-            <h1>Procurri Deal Database</h1>
-            <a href="new">Here is a list of all deals to date:</a>
+            <p><h1>Procurri Deal Database</h1></p>
+            <p><h2>Here is a list of all deals to date:</h2></p>
+            <a href="new_Deal.html">Create new Deal here</a>
             <br/><br/>
             <p>DEALS</p>
             <table border="1" cellpadding="10">
