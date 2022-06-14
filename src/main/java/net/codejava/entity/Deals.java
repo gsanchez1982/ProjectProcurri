@@ -12,17 +12,19 @@ public class Deals {
 	private String sInv; // Sales Invoice (Invoice to customer)
 	private String vInv; // Vendor Invoice
         private String OC; // Purchase order from Customer
+        private String dealComments; // Comments related to the deal
 
 	public Deals() {
 	}
 
-	protected Deals(Long id, String PO, String sInv, String vInv, String OC) {
+	protected Deals(Long id, String PO, String sInv, String vInv, String OC, String dealComments) {
 		super();
 		this.id = id;
 		this.PO = PO;
 		this.sInv = sInv;
 		this.vInv = vInv;
 		this.OC = OC;
+                this.dealComments = dealComments;
 	}
 
 	@Id
@@ -66,6 +68,14 @@ public class Deals {
 
 	public void setOC(String OC) {
                 this.OC = OC;
+	}
+        
+	public String getDealComments() {
+		return dealComments;
+	}
+
+	public void setDealComments(String dealComments) {
+                this.dealComments = dealComments;
 	}
 
 }

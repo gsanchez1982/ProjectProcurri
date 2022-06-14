@@ -4,30 +4,35 @@
     <head>
         <meta charset="utf-8" />
         <title>Add a new Deal</title>
+        <link href="ProcurriStyle.css" rel="stylesheet"/>
     </head>
     <body>
         <div align="center">
             <h1>Add a new deal to the database</h1>
             <br />
-            <form action="#" th:action="@{/save}" th:object="${Deal}"
+            <form action="#" th:action="@{/save}" th:object="${Deals}"
                   method="post">
 
                 <table border="0" cellpadding="10">
                     <tr>
                         <td>PO:</td>
-                        <td><input type="text" th:field="*{PO}" /></td>
+                        <td><input type="text" th:field="*{PO}" name="PO" /></td>
                     </tr>
                           <tr>
                         <td>Sales Invoice:</td>
-                        <td><input type="text" th:field="*{sInv}" /></td>
+                        <td><input type="text" th:field="*{sInv}" name="sInv" /></td>
                     </tr>
                     <tr>
                         <td>OC:</td>
-                        <td><input type="text" th:field="*{OC}" /></td>
+                        <td><input type="text" th:field="*{OC}" name="OC" /></td>
                     </tr>
-                              <tr>
+                    <tr>
                         <td>Vendor Invoice:</td>
-                        <td><input type="text" th:field="*{vInv}" /></td>
+                        <td><input type="text" th:field="*{vInv}" name="vInv" /></td>
+                    </tr>
+                    <tr>
+                        <td>Comments:</td>
+                        <td><input type="text" th:field="*{dealComments}" name="dealComments" /></td>
                     </tr>
                     <tr>
                         <td colspan="2"><button type="submit">Save</button> </td>

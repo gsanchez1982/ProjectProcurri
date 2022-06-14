@@ -39,7 +39,7 @@ public class AppController {
 
     @RequestMapping("/login")
     public String login(HttpSession session) {
-        session.setAttribute("mySessionAttribute", "Bienvenido");
+        session.setAttribute("mySessionAttribute", "Welcome");
 
         return "redirect:/";
     }
@@ -53,13 +53,20 @@ public class AppController {
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String saveDeal(@ModelAttribute("Deal") Deals Deal) {
-        service.save(Deal);
+    public String saveDeal(@ModelAttribute("Deal") Deals Deals) {
+        service.save(Deals);
 
         return "redirect:/";
     }
 
+    @RequestMapping("/edit/{id}")
+    public ModelAndView showEditDealsPage(@PathVariable(name = "id") int id) {
+        ModelAndView mav = new ModelAndView("edit_Deal");
+        Deals deal = service.get(id);
+        mav.addObject("deal", deal);
 
+        return mav;
+    }
 
     @RequestMapping("/delete/{id}")
     public String deleteDeal (@PathVariable(name = "id") int id) {
