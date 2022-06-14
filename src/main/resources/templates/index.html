@@ -16,9 +16,9 @@
             <table border="1" cellpadding="10">
                 <thead>
                     <tr>
-                        <th>OC</th>
                         <th>PO</th>
                         <th>Sales Invoice</th>
+                        <th>OC</th>
                         <th>Vendor Invoice</th>
                         <th>Comments</th>
                         <th>Actions</th>
@@ -26,9 +26,9 @@
                 </thead>
                 <tbody>
                     <tr th:each="listDeals : ${listDeals}">
-                        <td th:text="${listDeals.OC}">OC</td>
                         <td th:text="${listDeals.PO}">PO</td>
                         <td th:text="${listDeals.sInv}">Sales Invoice</td>
+                        <td th:text="${listDeals.OC}">OC</td>
                         <td th:text="${listDeals.vInv}">Vendor Invoice</td>
                         <td th:text="${listDeals.dealComments}">Comments</td>
                         
