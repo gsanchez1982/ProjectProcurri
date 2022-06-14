@@ -53,8 +53,8 @@ public class AppController {
     }
 
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String saveDeal(@ModelAttribute("Deal") Deals Deal) {
-        service.save(Deal);
+    public String saveDeal(@ModelAttribute("Deal") Deals Deals) {
+        service.save(Deals);
 
         return "redirect:/";
     }
