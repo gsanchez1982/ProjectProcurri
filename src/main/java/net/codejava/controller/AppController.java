@@ -59,7 +59,14 @@ public class AppController {
         return "redirect:/";
     }
 
+    @RequestMapping("/edit/{id}")
+    public ModelAndView showEditDealsPage(@PathVariable(name = "id") int id) {
+        ModelAndView mav = new ModelAndView("edit_Deal");
+        Deals deal = service.get(id);
+        mav.addObject("deal", deal);
 
+        return mav;
+    }
 
     @RequestMapping("/delete/{id}")
     public String deleteDeal (@PathVariable(name = "id") int id) {
