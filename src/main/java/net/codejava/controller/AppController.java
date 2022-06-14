@@ -39,7 +39,7 @@ public class AppController {
 
     @RequestMapping("/login")
     public String login(HttpSession session) {
-        session.setAttribute("mySessionAttribute", "Bienvenido");
+        session.setAttribute("mySessionAttribute", "Welcome");
 
         return "redirect:/";
     }
