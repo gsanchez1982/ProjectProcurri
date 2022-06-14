@@ -74,7 +74,7 @@ public class Deals {
 		return dealComments;
 	}
 
-	public void setDealComments(String OC) {
+	public void setDealComments(String dealComments) {
                 this.dealComments = dealComments;
 	}
 
