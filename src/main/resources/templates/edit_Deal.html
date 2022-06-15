@@ -13,13 +13,7 @@
 		<form action="#" th:action="@{/save}" th:object="${deal}"
 			method="post">
 
-			<table border="0" cellpadding="10">
-				<tr>				
-					<td>Deal ID:</td>
-					<td>
-						<input type="text" th:field="*{id}" readonly="readonly" />
-					</td>
-				</tr>			
+			<table border="0" cellpadding="10">		
 				<tr>				
 					<td>PO:</td>
 					<td>
@@ -33,6 +27,10 @@
 				<tr>
 					<td>OC:</td>
 					<td><input type="text" th:field="*{OC}" /></td>
+				</tr>
+				<tr>
+					<td>Customer:</td>
+					<td><input type="text" th:field="*{customer}" /></td>
 				</tr>
 				<tr>
 					<td>Vendor Invoice:</td>

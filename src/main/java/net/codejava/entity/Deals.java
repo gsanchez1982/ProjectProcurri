@@ -10,6 +10,7 @@ public class Deals {
 	private Long id;
 	private String PO; // Purchase order to Vendor
 	private String sInv; // Sales Invoice (Invoice to customer)
+        private String customer; // Name of the customer
 	private String vInv; // Vendor Invoice
         private String OC; // Purchase order from Customer
         private String dealComments; // Comments related to the deal
@@ -17,11 +18,12 @@ public class Deals {
 	public Deals() {
 	}
 
-	protected Deals(Long id, String PO, String sInv, String vInv, String OC, String dealComments) {
+	protected Deals(Long id, String PO, String sInv, String customer, String vInv, String OC, String dealComments) {
 		super();
 		this.id = id;
 		this.PO = PO;
 		this.sInv = sInv;
+                this.customer = customer;
 		this.vInv = vInv;
 		this.OC = OC;
                 this.dealComments = dealComments;
@@ -52,6 +54,14 @@ public class Deals {
 
 	public void setSInv(String sInv) {
 		this.sInv = sInv;
+	}
+        
+	public String getCustomer() {
+		return customer;
+	}
+
+	public void setCustomer(String customer) {
+		this.customer = customer;
 	}
 
 	public String getVInv() {
