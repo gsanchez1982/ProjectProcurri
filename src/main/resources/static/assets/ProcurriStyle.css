@@ -4,13 +4,17 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 */
 /* 
     Created on : Jun 14, 2022, 10:08:05 AM
-    Author     : guill
+    Author     : Guillermo Sanchez Estrada
 */
+
+* {
+    font-family: sans-serif;  
+}
 
 h1 {
     color: darkblue;
     font-weight: bold;
-    font-family: sans-serif;    
+  
 }
 
 .index_th, .index_td {
@@ -18,6 +22,5 @@ h1 {
 }
 
 .index_th {
-    font-family: sans-serif;
     font-weight: bold;
 }
