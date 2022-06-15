@@ -9,4 +9,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 h1 {
     color: darkblue;
+    font-weight: bold;
+    font-family: sans-serif;    
+}
+
+.index_th, .index_td {
+    text-align: center;
+}
+
+.index_th {
+    font-family: sans-serif;
+    font-weight: bold;
 }

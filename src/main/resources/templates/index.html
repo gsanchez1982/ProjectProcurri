@@ -17,25 +17,24 @@
             <table border="1" cellpadding="10">
                 <thead>
                     <tr>
-                        <th>PO</th>
-                        <th>Sales Invoice</th>
-                        <th>OC</th>
-                        <th>Customer</th>
-                        <th>Vendor Invoice</th>
-                        <th>Comments</th>
-                        <th>Actions</th>
+                        <th class="index_th">PO</th>
+                        <th class="index_th">Sales Invoice</th>
+                        <th class="index_th">OC</th>
+                        <th class="index_th">Customer</th>
+                        <th class="index_th">Vendor Invoice</th>
+                        <th class="index_th">Comments</th>
+                        <th class="index_th">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr th:each="listDeals : ${listDeals}">
-                        <td th:text="${listDeals.PO}">PO</td>
-                        <td th:text="${listDeals.sInv}">Sales Invoice</td>
-                        <td th:text="${listDeals.OC}">OC</td>
-                        <td th:text="${listDeals.customer}">Customer</td>
-                        <td th:text="${listDeals.vInv}">Vendor Invoice</td>
-                        <td th:text="${listDeals.dealComments}">Comments</td>
-                        
-                        <td>
+                        <td class="index_td" th:text="${listDeals.PO}">PO</td>
+                        <td class="index_td" th:text="${listDeals.sInv}">Sales Invoice</td>
+                        <td class="index_td" th:text="${listDeals.OC}">OC</td>
+                        <td class="index_td" th:text="${listDeals.customer}">Customer</td>
+                        <td class="index_td" th:text="${listDeals.vInv}">Vendor Invoice</td>
+                        <td class="index_td" th:text="${listDeals.dealComments}">Comments</td>                        
+                        <td class="index_td">
                              <a th:href="@{'/edit/' + ${listDeals.id}}">Edit</a>
                                             &nbsp;&nbsp;&nbsp;
                             <a th:href="@{'/delete/' + ${listDeals.id}}">Delete</a>
