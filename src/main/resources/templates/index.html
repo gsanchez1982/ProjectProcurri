@@ -28,7 +28,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="listDeals : ${listDeals}">
+                    <tr th:each="listDeals : ${listDeals}" th:class="${listDeals.PO}">
                         <td class="index_td" th:text="${listDeals.PO}">PO</td>
                         <td class="index_td" th:text="${listDeals.sInv}">Sales Invoice</td>
                         <td class="index_td" th:text="${listDeals.OC}">OC</td>
