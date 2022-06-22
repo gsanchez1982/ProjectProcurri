@@ -26,6 +26,8 @@ h1 {
     font-weight: bold;
 }
 
-.PO2201 {
-    background-color: #50ccc7;
+.cancelled {
+    background-color: red;
+    color: white;
+    font-weight: bold:
 }

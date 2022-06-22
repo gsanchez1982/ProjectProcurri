@@ -8,8 +8,7 @@
     </head>
     <body>
         <div align="center">
-            <p th:text="${session.mySessionAttribute}" th:unless="${session == null}">[...]
-                <br /> <span th:text="${today}">Today is...</span></p>
+            <p th:text="${session.mySessionAttribute}" th:unless="${session == null}">[...]</p>
             <p><h1>Procurri Mexico Deal Database</h1></p>
             
             <a href="new">Create new deal by clicking here</a>
@@ -28,9 +27,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr th:each="listDeals : ${listDeals}" th:class="${listDeals.PO}">
+                    <tr th:each="listDeals : ${listDeals}" th:class="${listDeals.sInvType}">
                         <td class="index_td" th:text="${listDeals.PO}">PO</td>
                         <td class="index_td" th:text="${listDeals.sInv}">Sales Invoice</td>
+                        <td class="index_td" th:text="${listDeals.sInvType}">Sales Invoice Status</td>
                         <td class="index_td" th:text="${listDeals.OC}">OC</td>
                         <td class="index_td" th:text="${listDeals.customer}">Customer</td>
                         <td class="index_td" th:text="${listDeals.vInv}">Vendor Invoice</td>
