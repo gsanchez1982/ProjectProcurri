@@ -32,11 +32,12 @@
 				</tr>
 				<tr>
 					<td>Sales Invoice Status:</td>
-					<td><select th:field="*{sInvType}">
+                                        <td><label for="sInvType">Choose an Invoice Status:</label>
+                                            <select id="sInvType" name="sInvType" th:field="*{sInvType}">
                                                 <option th:value="'Valid'" th:text="Valid"></option>
                                                 <option th:value="'Paid'" th:text="Paid"></option>
                                                 <option th:value="'Not yet invoiced'" th:text="Not yet invoiced"></option>
-                                                <option th:value="'cancelled'" th:text="Cancelled"></option>
+                                                <option th:value="'cancelled'" th:text="cancelled"></option>
                                             </select>
                                         </td>
 				</tr>
