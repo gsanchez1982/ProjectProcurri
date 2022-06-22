@@ -98,3 +98,5 @@ public class Deals {
 	public void setDealComments(String dealComments) {
                 this.dealComments = dealComments;
 	}
+        
+}
