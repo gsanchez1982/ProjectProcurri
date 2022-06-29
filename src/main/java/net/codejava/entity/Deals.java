@@ -19,7 +19,7 @@ public class Deals implements Serializable {
 	private String vInv; // Vendor Invoice
         private String OC; // Purchase order from Customer
         private String dealComments; // Comments related to the deal
-        @DateTimeFormat(pattern ="yyyy-MM-dd")
+        @DateTimeFormat(pattern ="dd-MMM-yyyy")
         private Date ocDate;
 
 	public Deals() {
