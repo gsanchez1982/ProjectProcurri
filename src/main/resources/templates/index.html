@@ -31,7 +31,7 @@
                 <tbody>
                     <tr th:each="listDeals : ${listDeals}" th:class="${listDeals.sInvType}">
                         <td class="index_td" th:text="${listDeals.PO}">PO</td>
-                        <td class="index_td" th:text="${listDeals.sInv}">Sales Invoice</td>
+                        <td class="index_td" th:text="${listDeals.sort(sInv)}">Sales Invoice</td>
                         <td class="index_td" th:text="${listDeals.sInvType}">Sales Invoice Status</td>
                         <td class="index_td" th:text="${listDeals.OC}">OC</td>
                         <td class="index_td" th:text="${#dates.format(listDeals.ocDate, 'dd/MMM/yyyy')}">OC Date</td>
