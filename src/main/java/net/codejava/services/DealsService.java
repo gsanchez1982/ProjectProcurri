@@ -18,7 +18,7 @@ public class DealsService {
 	private DealRepository repo;
 	
 	public List<Deals> listAll() {
-		return repo.findAll(Sort.by(Sort.Direction.ASC, "ocDate"));
+		return repo.findAll(Sort.by(Sort.Direction.ASC, "sINV", "ocDate"));
 	}
 	
 	public void save(Deals listDeals) {
