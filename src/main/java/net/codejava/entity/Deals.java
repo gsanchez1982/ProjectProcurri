@@ -1,12 +1,16 @@
 package net.codejava.entity;
 
+import java.io.Serializable;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Temporal;
+import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-public class Deals {
+public class Deals implements Serializable {
 	private Long id;
 	private String PO; // Purchase order to Vendor
 	private String sInv; // Sales Invoice (Invoice to customer)
@@ -15,11 +19,13 @@ public class Deals {
 	private String vInv; // Vendor Invoice
         private String OC; // Purchase order from Customer
         private String dealComments; // Comments related to the deal
+        @DateTimeFormat(pattern ="yyyy-MM-dd")
+        private Date ocDate;
 
 	public Deals() {
 	}
 
-	protected Deals(Long id, String PO, String sInv, String sInvType, String customer, String vInv, String OC, String dealComments) {
+	protected Deals(Long id, String PO, String sInv, String sInvType, String customer, String vInv, String OC, String dealComments, Date ocDate) {
 		super();
 		this.id = id;
 		this.PO = PO;
@@ -29,6 +35,7 @@ public class Deals {
 		this.vInv = vInv;
 		this.OC = OC;
                 this.dealComments = dealComments;
+                this.ocDate = ocDate;
 	}
 
 	@Id
@@ -97,6 +104,16 @@ public class Deals {
 
 	public void setDealComments(String dealComments) {
                 this.dealComments = dealComments;
+	}
+        
+                
+        @Temporal(javax.persistence.TemporalType.DATE)
+	public Date getOcDate() {
+		return ocDate;
+	}
+
+	public void setOcDate(Date ocDate) {
+                this.ocDate = ocDate;
 	}
         
 }
