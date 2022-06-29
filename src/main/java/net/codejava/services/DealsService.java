@@ -3,10 +3,12 @@ package net.codejava.services;
 import net.codejava.entity.Deals;
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import net.codejava.repositories.DealRepository;
+import org.springframework.data.domain.Sort;
 
 @Service
 @Transactional
@@ -16,7 +18,7 @@ public class DealsService {
 	private DealRepository repo;
 	
 	public List<Deals> listAll() {
-		return repo.findAll();
+		return repo.findAll(Sort.by(Sort.Direction.ASC, "ocDate"));
 	}
 	
 	public void save(Deals listDeals) {
