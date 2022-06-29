@@ -34,7 +34,7 @@
                         <td class="index_td" th:text="${listDeals.sInv}">Sales Invoice</td>
                         <td class="index_td" th:text="${listDeals.sInvType}">Sales Invoice Status</td>
                         <td class="index_td" th:text="${listDeals.OC}">OC</td>
-                        <td class="index_td" th:text="${listDeals.ocDate}">OC Date</td>
+                        <td class="index_td" th:text="${#dates.format(listDeals.ocDate, 'dd/MMM/yyyy')}">OC Date</td>
                         <td class="index_td" th:text="${listDeals.customer}">Customer</td>
                         <td class="index_td" th:text="${listDeals.vInv}">Vendor Invoice</td>
                         <td class="index_td" th:text="${listDeals.dealComments}">Comments</td>                        
