@@ -33,5 +33,14 @@ h1 {
 }
 
 .Cancelled a {
-    color: silver;
+    color: yellow;
 }
+
+.Cancelled a:hover {
+    color: darkgoldenrodyellow;
+}
+
+.Cancelled a:visited {
+    color: lightgray;
+}
+
