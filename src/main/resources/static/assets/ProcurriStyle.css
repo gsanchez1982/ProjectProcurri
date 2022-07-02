@@ -36,10 +36,6 @@ h1 {
     color: yellow;
 }
 
-.Cancelled a:hover {
-    color: darkgoldenrodyellow;
-}
-
 .Cancelled a:visited {
     color: lightgray;
 }
