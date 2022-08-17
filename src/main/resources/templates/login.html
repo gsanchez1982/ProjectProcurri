@@ -10,10 +10,10 @@
                 var username = document.getElementById("username").value;
                 var password = document.getElementById("password").value;
                 if (username == "abrown@procurri.com" && password == "Pro150127AK4"){
-                   document.getElementById("valmsg").style.display === "none";
+
                 } else {
-                    document.getElementById("valmsg").style.display === "block";
                     event.preventDefault();
+                    alert("Please input valid username and password.");
                 }
             }
         </script>
@@ -36,7 +36,6 @@
                     </tr>
                     <tr>
                         <td colspan="4"><button id="button" type="submit" onclick="validate()">Login</button> </td>
-                        <td id="valmsg">Please input correct username and password</td>
                     </tr>
                 </table>
             </form>
